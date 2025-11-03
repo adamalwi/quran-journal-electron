@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">📖</span>
+            Quran Journal
+        </div>
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="showPage('surah-list')">Surahs</button>
+            <button class="nav-tab" onclick="showPage('progress')">My Progress</button>
+        </nav>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search surah...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div id="sidebarSurahs" class="surah-list-sidebar">
+                <!-- Sidebar surah list will be loaded here -->
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Surah List Page -->
+            <div id="surah-list" class="page active">
+                <div class="content-header">
+                    <h1 class="page-title">The Holy Quran</h1>
+                </div>
+                
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading surahs...</p>
+                </div>
+
+                <div id="surahGrid" class="surah-grid" style="display: none;">
+                    <!-- Surah cards will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Progress Page -->
+            <div id="progress" class="page" style="display: none;">
+                <div class="content-header">
+                    <h1 class="page-title">My Reading Progress</h1>
+                </div>
+
+                <div id="statsGrid" class="stats-grid">
+                    <!-- Statistics will be loaded here -->
+                </div>
+
+                <div id="progressList" class="surah-grid">
+                    <!-- Progress items will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Surah Detail Modal -->
+    <div id="surahModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Surah Details</h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

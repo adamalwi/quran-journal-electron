@@ -1,0 +1,16 @@
+{
+  "name": "quran-journal",
+  "version": "1.0.0",
+  "description": "Desktop app for tracking Quran reading progress",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": ["quran", "electron", "tracker"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  }
+}
