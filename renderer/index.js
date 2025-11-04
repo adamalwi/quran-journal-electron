@@ -240,7 +240,7 @@ function createProgressCard(item) {
     `;
 }
 
-// Modal functions (same as before)
+// Modal functions 
 function openSurahModal(surahNumber) {
     const surah = allSurahs.find(s => s.number === surahNumber);
     const progress = userProgress[surah.number] || { completed: 0, notes: '' };
